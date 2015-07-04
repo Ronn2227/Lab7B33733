@@ -11,11 +11,11 @@ class Nodo {
 private:
 
 	T actual;
-	Nodo<T> *prev, *next;
+	Nodo<T> *prev, *next; // Anterior y siguiente respectivamente.
 
 public:
 
-	Nodo(T elemento) {
+	Nodo(T elemento) { // Estado inicial del Nodo.
 		this->actual = elemento;
 		prev = NULL;
 		next = NULL;
@@ -24,7 +24,7 @@ public:
 	~Nodo() {
 	}
 
-	T getActual() {
+	T & getActual() {
 		return actual;
 	}
 
@@ -42,11 +42,6 @@ public:
 
 	void setNext(Nodo<T> * e) {
 		this->next = e;
-	}
-
-	int compareTo(Nodo<T> * otro) {
-		int cmp = this->actual < otro->actual ? -1 : this->actual == otro->actual ? 0 : 1;
-		return cmp;
 	}
 
 private:

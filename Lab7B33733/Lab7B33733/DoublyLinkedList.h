@@ -6,10 +6,10 @@
 using namespace std;
 
 template<class T>
-class Lista {
+class DoublyLinkedList {
 
 	template<class T>
-	friend ostream & operator<<(ostream &, Lista<T> &);
+	friend ostream & operator<<(ostream &, DoublyLinkedList<T> &);
 
 private:
 
@@ -19,13 +19,13 @@ private:
 
 public:
 
-	Lista() { // Estado inicial de la lista.
+	DoublyLinkedList() { // Estado inicial de la lista.
 		size = 0;
 		cabeza = NULL;
 		cola = NULL;
 	}
 
-	virtual ~Lista() {
+	virtual ~DoublyLinkedList() {
 		if (cabeza != NULL) {
 			destruirLista();
 		}
@@ -231,7 +231,24 @@ public:
 		return size;
 	}
 
+	Iterador<T> begin() { // Devuelve itarador que apunta a la cabeza para que recorra hacia adelante.
+		return Iterador<T>(cabeza);
+	}
+
+	Iterador<T> rBegin() { // Devuelve iterador que apunta a la cola para que recorra hacia atras.
+		return Iterador<T>(cola);
+	}
+
+	Iterador<T> end() {
+		return Iterador<T>(NULL);
+	}
+
+	Iterador<T> rEnd() {
+		return Iterador<T>(NULL);
+	}
+
 private:
+
 	void imprimir(Nodo<T> * nodo, ostream & out) { // Devuelve un out que sirve para imprimir la lista.
 		Nodo<T> * actual = nodo;
 		while (actual->getNext() != NULL) {
@@ -250,7 +267,7 @@ private:
 };
 
 template<class T>
-ostream & operator<<(ostream & out, Lista<T> & l) {
+ostream & operator<<(ostream & out, DoublyLinkedList<T> & l) {
 	l.imprimir(l.cabeza, out);
 	return out;
 }

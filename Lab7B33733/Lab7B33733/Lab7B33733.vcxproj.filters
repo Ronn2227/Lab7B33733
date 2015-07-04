@@ -24,13 +24,19 @@
     <ClInclude Include="targetver.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Lista.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="Nodo.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Iterador.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DoublyLinkedList.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Gato.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Persona.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -39,6 +45,12 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Lab7B33733.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Gato.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Persona.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
